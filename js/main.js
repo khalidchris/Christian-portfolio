@@ -123,6 +123,25 @@ const words = [
     "clean & scalable code.",
     "brands that stand out."
 ];
+const sections = document.querySelectorAll(".hidden");
+
+const revealOnScroll = () => {
+    const triggerBottom = window.innerHeight * 0.85;
+
+    sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+
+        if (sectionTop < triggerBottom) {
+            section.classList.add("show");
+        }
+    });
+};
+
+// Reveal sections already in view on load
+window.addEventListener("DOMContentLoaded", revealOnScroll);
+window.addEventListener("scroll", revealOnScroll);
+
+
 
 
 
