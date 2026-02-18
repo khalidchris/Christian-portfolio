@@ -381,3 +381,28 @@ p {
         margin-top: 10px;
     }
 }
+/* ===== PROJECT LINKS (GitHub & Live Demo) ===== */
+.project-links {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.project-links a {
+    text-decoration: none;
+    font-size: 0.8rem;
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    transition: 0.3s ease;
+    font-weight: 500;
+}
+
+.project-links a:hover {
+    background: var(--accent);
+    color: #000;
+    transform: translateY(-2px);
+}
+
