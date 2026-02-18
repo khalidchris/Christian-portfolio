@@ -80,5 +80,51 @@ toggleBtn.addEventListener("click", () => {
         localStorage.setItem("theme", "dark");
     }
 });
+// ===== Smooth Scroll =====
+document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', e => {
+        if (link.hash !== "") {
+            e.preventDefault();
+            document.querySelector(link.hash).scrollIntoView({
+                behavior: "smooth"
+            });
+        }
+    });
+});
+// ===== Project Card Glow Effect =====
+const cards = document.querySelectorAll(".project-card");
+
+cards.forEach(card => {
+    card.addEventListener("mousemove", e => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        card.style.background = `
+            radial-gradient(circle at ${x}px ${y}px,
+            rgba(0,198,255,0.15),
+            rgba(255,255,255,0.05))
+        `;
+    });
+
+    card.addEventListener("mouseleave", () => {
+        card.style.background = "var(--card)";
+    });
+});
+// ===== Track Project Clicks =====
+document.querySelectorAll(".project-links a").forEach(link => {
+    link.addEventListener("click", () => {
+        console.log("Project link clicked:", link.href);
+    });
+});
+const words = [
+    "modern web applications.",
+    "real-world software systems.",
+    "clean & scalable code.",
+    "brands that stand out."
+];
+
+
+
 
 
