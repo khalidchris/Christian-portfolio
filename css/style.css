@@ -170,12 +170,6 @@ p {
     line-height: 1.8;
 }
 
-/* SCROLL ANIMATION */
-.hidden {
-    opacity: 0;
-    transform: translateY(60px);
-    transition: all 0.8s ease;
-}
 
 .show {
     opacity: 1;
@@ -405,4 +399,5 @@ p {
     color: #000;
     transform: translateY(-2px);
 }
+
 
