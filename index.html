@@ -1,35 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <meta charset="UTF-8">
-    <title>Adams Christian</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-</head>
 <body>
+
 <header class="navbar">
     <div class="logo">CHRISTIAN</div>
     <nav>
-        <a href="#">Home</a>
-        <a href="#">About</a>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
         <a href="#projects">Projects</a>
-        <a href="#">Contact</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
         <button id="theme-toggle">🌙</button>
     </nav>
 </header>
 
-
-<section class="hero">
+<!-- HERO -->
+<section class="hero" id="home">
     <div class="overlay"></div>
-
     <div class="content">
         <h1>Adams Christian</h1>
-        <h2>
-            I create <span class="typing"></span>
-        </h2>
+        <h2>I create <span class="typing"></span></h2>
         <p>Modern, high-impact websites that convert visitors into clients.</p>
- <section class="hero">
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
     <h2>What I Do</h2>
     <p>
         I design and build modern, fast, and responsive websites
@@ -37,79 +31,54 @@
     </p>
 </section>
 
-<section class="hero">
+<!-- WHY CHOOSE ME -->
+<section class="section" id="skills">
     <h2>Why Choose Me</h2>
     <p>
         Clean code. Premium design. Attention to detail.
         I don’t build websites — I build experiences.
     </p>
 </section>
+
+<!-- PROJECTS -->
 <section class="section projects" id="projects">
     <h2>Featured Projects</h2>
 
     <div class="projects-grid">
 
-        <!-- School Management System -->
+        <div class="project-card">
+            <h3>Hotel Booking System</h3>
+            <p>Desktop app for room booking, guest management, and billing.</p>
+            <span class="tech">Python • Tkinter • OOP</span>
+            <div class="project-links">
+                <a href="https://github.com/yourusername/hotel-booking" target="_blank">GitHub</a>
+            </div>
+        </div>
+
         <div class="project-card">
             <h3>School Management System</h3>
-            <p>
-                A complete system for managing students, teachers,
-                results, and attendance.
-            </p>
-            <span class="tech">Python • Tkinter • CSV</span>
+            <p>System for managing students, results, and attendance.</p>
+            <span class="tech">Python • CSV • Tkinter</span>
             <div class="project-links">
                 <a href="https://github.com/yourusername/school-system" target="_blank">GitHub</a>
             </div>
         </div>
 
-        <!-- Hotel Booking System -->
-        <div class="project-card">
-    <h3>Hotel Booking System</h3>
-    <p>
-        Desktop application for room booking, guest
-        management, and automated billing.
-    </p>
-    <span class="tech">Python • Tkinter • OOP</span>
-
-    <div class="project-links">
-        <a href="https://github.com/khalidchris/apartment-booking">GitHub</a>
-        <a href="#" target="_blank">Live Demo</a>
-    </div>
-</div>
-
-
-        <!-- Banking System -->
         <div class="project-card">
             <h3>Banking System</h3>
-            <p>
-                Simulates banking operations such as deposits,
-                withdrawals, transfers, and account management.
-            </p>
+            <p>Simulates deposits, withdrawals, transfers, and accounts.</p>
             <span class="tech">Python • OOP • Team Project</span>
             <div class="project-links">
                 <a href="https://github.com/yourusername/banking-system" target="_blank">GitHub</a>
             </div>
         </div>
 
-        <!-- Student Dashboard -->
-        <div class="project-card">
-            <h3>Student Dashboard</h3>
-            <p>
-                Interactive dashboard with dark mode and analytics.
-            </p>
-            <span class="tech">HTML • CSS • JavaScript</span>
-            <div class="project-links">
-                <a href="#" target="_blank">Live Demo</a>
-                <a href="https://github.com/yourusername/student-dashboard" target="_blank">GitHub</a>
-            </div>
-        </div>
-
     </div>
 </section>
 
+<!-- PRICING -->
 <section class="section pricing" id="pricing">
     <h2>Pricing Plans</h2>
-
     <div class="pricing-grid">
         <div class="price-card">
             <h3>Starter</h3>
@@ -118,9 +87,7 @@
                 <li>1 Page Website</li>
                 <li>Responsive Design</li>
                 <li>Basic Animations</li>
-                <li>3 Days Delivery</li>
             </ul>
-            <a href="#" class="btn outline">Choose Plan</a>
         </div>
 
         <div class="price-card featured">
@@ -128,12 +95,9 @@
             <p class="price">$120</p>
             <ul>
                 <li>Up to 5 Pages</li>
-                <li>Premium Animations</li>
                 <li>Dark Mode</li>
                 <li>SEO Friendly</li>
-                <li>5 Days Delivery</li>
             </ul>
-            <a href="#" class="btn primary">Best Value</a>
         </div>
 
         <div class="price-card">
@@ -142,25 +106,18 @@
             <ul>
                 <li>Unlimited Pages</li>
                 <li>Custom UI/UX</li>
-                <li>Advanced Interactions</li>
                 <li>Priority Support</li>
-                <li>7 Days Delivery</li>
             </ul>
-            <a href="#" class="btn outline">Choose Plan</a>
         </div>
     </div>
 </section>
 
-
-
+<!-- CONTACT -->
+<section class="section" id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: your@email.com</p>
+    <p>GitHub: github.com/yourusername</p>
+</section>
 
 <script src="js/main.js"></script>
 </body>
-</html>
-
-
-
-
-
-
-
