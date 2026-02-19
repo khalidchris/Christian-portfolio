@@ -1,6 +1,4 @@
-/* =========================
-   ROOT & THEME VARIABLES
-========================= */
+/* ===== VARIABLES ===== */
 :root {
     --bg: #0b0f19;
     --text: #ffffff;
@@ -15,9 +13,7 @@ body.light {
     --accent: #0072ff;
 }
 
-/* =========================
-   GLOBAL RESET
-========================= */
+/* ===== GLOBAL ===== */
 * {
     margin: 0;
     padding: 0;
@@ -28,12 +24,10 @@ body.light {
 body {
     background: var(--bg);
     color: var(--text);
-    overflow-x: hidden;
+    transition: 0.4s;
 }
 
-/* =========================
-   NAVBAR
-========================= */
+/* ===== NAVBAR ===== */
 .navbar {
     position: fixed;
     top: 20px;
@@ -51,37 +45,12 @@ body {
     z-index: 1000;
 }
 
-.logo {
-    font-weight: 800;
-    letter-spacing: 2px;
-    color: var(--accent);
-}
+.logo { color: var(--accent); font-weight: 800; letter-spacing: 2px; }
+.navbar nav a { color: var(--text); margin-left: 25px; text-decoration: none; transition: 0.3s; }
+.navbar nav a:hover { color: var(--accent); }
+#theme-toggle { padding: 6px 10px; border-radius: 50%; border: none; cursor: pointer; background: var(--card); color: var(--text); }
 
-.navbar nav a {
-    color: var(--text);
-    text-decoration: none;
-    margin-left: 25px;
-    font-weight: 500;
-    transition: 0.3s;
-}
-
-.navbar nav a:hover {
-    color: var(--accent);
-}
-
-#theme-toggle {
-    margin-left: 15px;
-    padding: 6px 10px;
-    border-radius: 50%;
-    border: none;
-    cursor: pointer;
-    background: var(--card);
-    color: var(--text);
-}
-
-/* =========================
-   HERO SECTION
-========================= */
+/* ===== HERO ===== */
 .hero {
     min-height: 100vh;
     display: flex;
@@ -92,38 +61,12 @@ body {
     position: relative;
     padding: 100px 20px 60px;
 }
+.overlay { position: absolute; inset: 0; background: url("https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3") center/cover; opacity: 0.15; }
+.hero h1 { font-size: 3rem; letter-spacing: 2px; }
+.hero h2 { margin: 15px 0; font-size: 1.5rem; color: var(--accent); }
+.hero p { opacity: 0.85; line-height: 1.6; }
 
-.overlay {
-    position: absolute;
-    inset: 0;
-    background: url("https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3") center/cover;
-    opacity: 0.15;
-}
-
-.content {
-    position: relative;
-    max-width: 700px;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    letter-spacing: 2px;
-}
-
-.hero h2 {
-    margin: 15px 0;
-    font-size: 1.5rem;
-    color: var(--accent);
-}
-
-.hero p {
-    opacity: 0.85;
-    line-height: 1.6;
-}
-
-/* =========================
-   SECTIONS
-========================= */
+/* ===== SECTIONS ===== */
 .section {
     max-width: 900px;
     margin: 80px auto;
@@ -136,153 +79,37 @@ body {
     transform: translateY(40px);
     transition: 0.6s ease;
 }
+.section.show { opacity: 1; transform: translateY(0); }
+.section h2 { font-size: 2rem; margin-bottom: 20px; color: var(--accent); }
+.section p { opacity: 0.85; font-size: 1.05rem; line-height: 1.7; }
 
-.section.show {
-    opacity: 1;
-    transform: translateY(0);
-}
+/* ===== PROJECTS ===== */
+.projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 30px; margin-top:30px; }
+.project-card { padding: 25px; background: var(--card); border-radius: 20px; text-align: left; transition: 0.4s; }
+.project-card:hover { transform: translateY(-8px); }
+.project-card h3 { color: var(--accent); margin-bottom: 10px; }
+.tech { font-size: 0.8rem; opacity: 0.7; }
+.project-links { margin-top: 15px; display: flex; gap: 10px; }
+.project-links a { text-decoration: none; font-size: 0.8rem; padding: 6px 14px; border-radius: 20px; border:1px solid var(--accent); color: var(--accent); transition:0.3s;}
+.project-links a:hover { background: var(--accent); color:#000; }
 
-.section h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: var(--accent);
-}
+/* ===== PRICING ===== */
+.pricing-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:25px; margin-top:30px; }
+.price-card { background: var(--card); padding:30px; border-radius:20px; transition:0.4s; text-align:center; }
+.price-card:hover { transform: translateY(-8px);}
+.price-card h3 { margin-bottom:10px;}
+.price { font-size:2rem; color: var(--accent); margin-bottom:15px;}
+.price-card ul { list-style:none; margin-top:10px;}
+.price-card li { margin:8px 0; opacity:0.85;}
+.featured { border:2px solid var(--accent); transform:scale(1.03); }
 
-.section p {
-    opacity: 0.85;
-    font-size: 1.05rem;
-    line-height: 1.7;
-}
+/* ===== CONTACT ===== */
+#contact p { margin:10px 0; }
 
-/* =========================
-   PROJECTS
-========================= */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    margin-top: 30px;
-}
-
-.project-card {
-    padding: 25px;
-    background: var(--card);
-    border-radius: 20px;
-    text-align: left;
-    transition: 0.4s;
-}
-
-.project-card:hover {
-    transform: translateY(-8px);
-}
-
-.project-card h3 {
-    color: var(--accent);
-    margin-bottom: 10px;
-}
-
-.project-card p {
-    margin-bottom: 10px;
-}
-
-.tech {
-    font-size: 0.8rem;
-    opacity: 0.7;
-}
-
-/* Project Links */
-.project-links {
-    margin-top: 15px;
-    display: flex;
-    gap: 10px;
-}
-
-.project-links a {
-    text-decoration: none;
-    font-size: 0.8rem;
-    padding: 6px 14px;
-    border-radius: 20px;
-    border: 1px solid var(--accent);
-    color: var(--accent);
-    transition: 0.3s;
-}
-
-.project-links a:hover {
-    background: var(--accent);
-    color: #000;
-}
-
-/* =========================
-   PRICING
-========================= */
-.pricing-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
-    margin-top: 30px;
-}
-
-.price-card {
-    background: var(--card);
-    padding: 30px;
-    border-radius: 20px;
-    transition: 0.4s;
-}
-
-.price-card:hover {
-    transform: translateY(-8px);
-}
-
-.price-card h3 {
-    margin-bottom: 10px;
-}
-
-.price {
-    font-size: 2rem;
-    color: var(--accent);
-    margin-bottom: 15px;
-}
-
-.price-card ul {
-    list-style: none;
-    margin-top: 10px;
-}
-
-.price-card li {
-    margin: 8px 0;
-    opacity: 0.85;
-}
-
-.featured {
-    border: 2px solid var(--accent);
-    transform: scale(1.03);
-}
-
-/* =========================
-   CONTACT
-========================= */
-#contact p {
-    margin: 10px 0;
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2.2rem;
-    }
-
-    .hero h2 {
-        font-size: 1.2rem;
-    }
-
-    .navbar {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .navbar nav a {
-        margin: 0 10px;
-    }
+/* ===== RESPONSIVE ===== */
+@media (max-width:768px){
+    .hero h1{font-size:2.2rem;}
+    .hero h2{font-size:1.2rem;}
+    .navbar{flex-direction:column; gap:10px;}
+    .navbar nav a{margin:0 10px;}
 }
