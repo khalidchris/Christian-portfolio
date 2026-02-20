@@ -113,3 +113,34 @@ body {
     .navbar{flex-direction:column; gap:10px;}
     .navbar nav a{margin:0 10px;}
 }
+/* Resume Section */
+.resume-actions {
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    margin-right: 10px;
+    background: #111;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #333;
+}
+
+.btn.outline {
+    background: transparent;
+    color: #111;
+    border: 2px solid #111;
+}
+
+.btn.outline:hover {
+    background: #111;
+    color: #fff;
+}
+
